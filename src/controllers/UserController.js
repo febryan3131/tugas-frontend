@@ -41,7 +41,7 @@ const formatUser = (title) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             const pakenama = users.find(function (user) {
-                return user.name === 'Mr/Mrs '+ name;
+                return user.name.toLocaleLowerCase() === name.toLocaleLowerCase();
             })
             resolve(pakenama)
         }, 2000);
